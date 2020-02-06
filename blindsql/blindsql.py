@@ -56,11 +56,11 @@ def binary_search(alphanumeric_list, left, right, url, pwd):
 
     # Now do recursion
     if check_user('admin', soup_obj):
-        print(url + binary_search_string.format(pwd, alphanumeric_list[left:mid]) + " Matched!")
+        print(url + binary_search_string.format(pwd, alphanumeric_list[left:mid]), " Matched!")
         # Keep checking left if found a match
         return binary_search(alphanumeric_list, left, mid, url, pwd)
     else:
-        print(url + binary_search_string.format(pwd, alphanumeric_list[left:mid]) + " No match")
+        print(url + binary_search_string.format(pwd, alphanumeric_list[left:mid]), " No match")
         # If no matches found in the left then check the right
         return binary_search(alphanumeric_list, mid, right, url, pwd)
 
