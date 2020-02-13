@@ -12,7 +12,7 @@ from string import ascii_lowercase, digits
 
 def fetch_request(url_to_connect, user_id, pwd):
     """
-    Fetch request to the server  to get a response back
+    Fetch request to the server to get a response back
     :param url_to_connect: (string) url to the server to connect to
     :param user_id: (string) id of an account
     :param pwd: (string) password of an account
