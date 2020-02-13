@@ -6,7 +6,7 @@ wfp2_site = sys.argv[1]
 url = f'''http://{wfp2_site}/mongodb/example2/?search='''
 alpha_numeric = string.ascii_letters + string.digits
 
-# Psuedocode for list:
+# Pseudo-code for list:
 # 1) Loop through every letter in alpha_numeric
 # 2) Inject every letter for every loop,
 #   2a) If 'admin' found, then letter is valid
