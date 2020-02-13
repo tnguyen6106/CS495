@@ -25,10 +25,9 @@ def fetch_request(url_to_connect, user_id, pwd):
         return response.elapsed.total_seconds()
 
 
-def find_char_with_highest_elapsed_time(search_list, url_to_connect, user_id, pwd):
+def find_chars_with_highest_elapsed_time(search_list, url_to_connect, user_id, pwd):
     """
-    Search for a character that has longest response time when connect to a server,
-    return a list contains 2 characters, each character is the highest elapsed time of a search round.
+    Search for characters that has longest response time when connect to a server,
     :param search_list: (list) a list of characters to be searched
     :param url_to_connect: (string) url of a server to connect to
     :param user_id: (string) id of an account
@@ -88,7 +87,7 @@ def timing():
     done = False
 
     while not done:
-        returned_highest_list = find_char_with_highest_elapsed_time(list_to_search, url, 'hacker', password)
+        returned_highest_list = find_chars_with_highest_elapsed_time(list_to_search, url, 'hacker', password)
 
         print('Chars in list: ', returned_highest_list)
 
