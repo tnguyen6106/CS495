@@ -34,7 +34,7 @@ def find_char_with_highest_elapsed_time(search_list, url_to_connect, user_id, pw
     :param user_id: (string) id of an account
     :param pwd: (string) password of an account
     :return: (list) a list contains 2 characters, each character is the highest elapsed time of a search round OR
-             (list) a list contains contains the last character of a password with a 200 status code.
+             (list) a list contains the last character of a password with a 200 status code.
     """
 
     highest_list = []
