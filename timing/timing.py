@@ -27,7 +27,7 @@ def fetch_request(url_to_connect, user_id, pwd):
 
 def find_chars_with_highest_elapsed_time(search_list, url_to_connect, user_id, pwd):
     """
-    Search for character that has longest response time when connect to a server,
+    Search for character that has longest response time when connect to a server
     :param search_list: (list) a list of characters to be searched
     :param url_to_connect: (string) url of a server to connect to
     :param user_id: (string) id of an account
