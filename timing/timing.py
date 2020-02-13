@@ -81,11 +81,14 @@ def check_connection(url_to_connect):
     """
     try:
         connection = requests.get(url_to_connect, timeout=5)
-        print('Successfully connected!')
-        return True
     except requests.ConnectionError:
         print('No Internet Connection')
-    return False
+        return False
+    if connection.status_code == 404:
+        print('No Internet Connection')
+        return False
+    print('Successfully connected!')
+    return True
 
 
 # Root of the program. Everything starts here
