@@ -73,12 +73,36 @@ def find_chars_with_highest_elapsed_time(search_list, url_to_connect, user_id, p
     return highest_list
 
 
+def check_connection(url_to_connect):
+    """
+    Check connection to a server
+    :param url_to_connect: (string) url to connect to a server
+    :return: (boolean) True if successfully connected, False otherwise
+    """
+    try:
+        connection = requests.get(url_to_connect, timeout=5)
+        print('Successfully connected!')
+        return True
+    except requests.ConnectionError:
+        print('No Internet Connection')
+    return False
+
+
 # Root of the program. Everything starts here
-def timing():
+def main():
+
+    # Check user inputs
+    if len(sys.argv) < 2 or len(sys.argv) > 2:
+        print('Usage: python3 timing.py <url>')
+        return
 
     wfp2_site = sys.argv[1]
 
     url = f'''http://{wfp2_site}/authentication/example2/'''
+
+    # Check connection to the server
+    if not check_connection(url):
+        return
 
     password = ''
 
@@ -106,8 +130,8 @@ def timing():
             print('\nCharacters don\'t match. Starting over!')
             print('Current pass: ', password, '\n')
 
-    return password
+    print('Complete pass: ', password)
 
 
-result = timing()
-print('Complete pass: ', result)
+if __name__ == '__main__':
+    main()
