@@ -1,6 +1,11 @@
-# cs495-Thong-Nguyen
+# CS495 Thong Nguyen
 
-### Start of Web Security Course
+## Web Security
 
-#### Testing
+#### Objective:
+* Have a look at common classes of web and cloud vulnerabilities
+* Hands-on practice exploiting them
+    * Two main programming assignments:
+        * Blind SQL attack
+        * Timing Side-Channel Attack
 
