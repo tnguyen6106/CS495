@@ -1,6 +1,4 @@
-# CS495 Thong Nguyen
-
-## Web Security
+# Web Security
 
 #### Objective:
 * Have a look at common classes of web and cloud vulnerabilities
