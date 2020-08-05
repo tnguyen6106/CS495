@@ -1,6 +1,6 @@
 # Web Security
 
-#### Objective:
+#### Objectives:
 * Have a look at common classes of web and cloud vulnerabilities
 * Hands-on practice exploiting them
     * Two main programs:
